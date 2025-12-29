@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia Archive | Jacaranda Summer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --washi-white: #FAF7F2;
+            --jacaranda-purple: #928BB2;
+            --jacaranda-light: #B4ADD4;
+            --ink-black: #2C2A29;
+            --soft-clay: #A69B92;
+            --summer-sky: #E0E7FF;
+        }
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: var(--washi-white);
+            color: var(--ink-black);
+            overflow-x: hidden;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        h1, h2, h3, .serif { 
+            font-family: 'Cormorant Garamond', serif; 
+        }
+        .jp-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Washi Texture Overlay */
+        .washi-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        ::selection {
+            background-color: rgba(146, 139, 178, 0.2);
+            color: var(--ink-black);
+        }
+
+        /* Smooth custom scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--washi-white); }
+        ::-webkit-scrollbar-thumb { background: var(--jacaranda-purple); border-radius: 10px; }
+        
+        input::placeholder {
+            color: rgba(44, 42, 41, 0.3);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Floating Jacaranda Petals Animation */
+        .petal {
+            position: fixed;
+            background-color: var(--jacaranda-light);
+            border-radius: 150% 0 150% 0;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+            filter: blur(1px);
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translate(100px, 100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.11.11"
+  }
+}
+</script>
+</head>
+<body>
+    <div class="washi-overlay"></div>
+    <div id="root"></div>
+    
+    <!-- Simple Petal Script for ambiance -->
+    <script>
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            const size = Math.random() * 8 + 4;
+            petal.style.width = size + 'px';
+            petal.style.height = size + 'px';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.top = '-20px';
+            petal.style.animation = `drift ${Math.random() * 10 + 10}s linear infinite`;
+            petal.style.opacity = Math.random() * 0.3 + 0.1;
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 20000);
+        }
+        setInterval(createPetal, 1500);
+    </script>
+</body>
+</html>
