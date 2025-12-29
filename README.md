@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# au-friends
 
-# Run and deploy your AI Studio app
+A React application built with Vite.
 
-This contains everything you need to run your app locally.
+## Project Setup
 
-View your app in AI Studio: https://ai.studio/apps/drive/1O-bKljIGeV_i6khMWVzTwhlcrafQOERp
+### Prerequisites
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-## Run Locally
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-**Prerequisites:**  Node.js
+## Available Scripts
 
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the app for production.
+- `npm run preview`: Locally previews the production build.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deployment
+
+This project is configured to deploy to GitHub Pages automatically using GitHub Actions.
+
+1. Push your changes to the `main` branch.
+2. The `Deploy to GitHub Pages` workflow will run automatically.
+3. Ensure you have enabled GitHub Pages in your repository settings (Settings > Pages > Source: GitHub Actions).
+
+## Configuration
+
+- **.gitignore**: Configured to ignore system files, logs, and dependencies.
+- **package.json**: dependencies and scripts setup.
+
+## Note
+Environment variables should be placed in `.env` (not committed to git).

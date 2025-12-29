@@ -10,8 +10,7 @@ interface FriendCardProps {
 
 const FriendCard: React.FC<FriendCardProps> = ({ friend, onOpenDetails }) => {
   return (
-    <motion.div 
-      layout
+    <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98 }}
@@ -20,13 +19,13 @@ const FriendCard: React.FC<FriendCardProps> = ({ friend, onOpenDetails }) => {
       className="flex flex-col group w-full cursor-pointer"
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-white shadow-[0_10px_30px_rgba(146,139,178,0.08)] group-hover:shadow-[0_20px_50px_rgba(146,139,178,0.15)] transition-all duration-1000 ease-out border border-[#F0EDEA]">
-        <img 
-          src={friend.imageUrl} 
-          alt={friend.name} 
+        <img
+          src={friend.imageUrl}
+          alt={friend.name}
           className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-[2.5s] group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-[#928BB2]/5 group-hover:bg-transparent transition-colors duration-1000" />
-        
+
         {/* Soft Purple Glow on Hover */}
         <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-1000 bg-gradient-to-t from-[#928BB2]/20 via-transparent to-transparent backdrop-blur-[1px]" />
       </div>
@@ -40,7 +39,7 @@ const FriendCard: React.FC<FriendCardProps> = ({ friend, onOpenDetails }) => {
             {friend.location}
           </p>
         </div>
-        
+
         <div className="pt-6 border-t border-[#F0EDEA]">
           <p className="text-[13px] leading-[1.7] text-[#544238]/80 font-light italic h-[4.5rem] line-clamp-3 overflow-hidden group-hover:text-[#2C2A29] transition-colors duration-1000">
             “{friend.description}”

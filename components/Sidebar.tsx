@@ -11,17 +11,16 @@ interface SidebarProps {
   allTags: string[];
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ 
-  searchQuery, 
-  setSearchQuery, 
-  selectedTags, 
-  toggleTag, 
+const Sidebar: React.FC<SidebarProps> = ({
+  searchQuery,
+  setSearchQuery,
+  selectedTags,
+  toggleTag,
   resetTags,
-  allTags 
+  allTags
 }) => {
   return (
-    <motion.nav 
-      layout
+    <motion.nav
       className="xl:w-[320px] w-full xl:h-screen xl:fixed xl:left-0 xl:top-0 p-10 xl:p-14 flex flex-col z-50 bg-[#1D3557] border-r border-[#243B5A] overflow-hidden relative shadow-2xl"
     >
       {/* Title Section */}
@@ -37,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       <div className="flex flex-col md:flex-row xl:flex-col gap-14 xl:gap-20 w-full relative z-10">
-        
+
         {/* Search */}
         <div className="flex-1 xl:w-full">
           <div className="relative group">
@@ -54,9 +53,9 @@ const Sidebar: React.FC<SidebarProps> = ({
         {/* Filters Area */}
         <div className="flex-[2] xl:w-full">
           <div className="flex justify-between items-center mb-6">
-            <div className="h-4" /> 
+            <div className="h-4" />
             {selectedTags.length > 0 && (
-              <button 
+              <button
                 onClick={resetTags}
                 className="text-[9px] text-[#928BB2] hover:text-[#FAF7F2] transition-colors underline underline-offset-4 decoration-[#243B5A] uppercase tracking-widest"
               >
@@ -64,19 +63,17 @@ const Sidebar: React.FC<SidebarProps> = ({
               </button>
             )}
           </div>
-          
+
           <div className="flex xl:flex-col flex-row gap-6 xl:gap-8 overflow-x-auto xl:overflow-x-visible no-scrollbar pb-4 xl:pb-0">
             {allTags.map(tag => (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`whitespace-nowrap text-[12px] tracking-[0.15em] transition-all duration-700 flex items-center gap-5 group text-left ${
-                  selectedTags.includes(tag) ? 'text-[#FAF7F2] font-medium' : 'text-[#B4ADD4]/50 hover:text-[#928BB2]'
-                }`}
+                className={`whitespace-nowrap text-[12px] tracking-[0.15em] transition-all duration-700 flex items-center gap-5 group text-left ${selectedTags.includes(tag) ? 'text-[#FAF7F2] font-medium' : 'text-[#B4ADD4]/50 hover:text-[#928BB2]'
+                  }`}
               >
-                <div className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
-                  selectedTags.includes(tag) ? 'bg-[#928BB2] scale-110' : 'bg-transparent border border-[#243B5A] group-hover:border-[#928BB2]'
-                }`} />
+                <div className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${selectedTags.includes(tag) ? 'bg-[#928BB2] scale-110' : 'bg-transparent border border-[#243B5A] group-hover:border-[#928BB2]'
+                  }`} />
                 {tag}
               </button>
             ))}

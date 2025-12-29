@@ -1,7 +1,5 @@
 {
-  "name": "LuminaBooks & NanoEditor",
-  "description": "A sophisticated book collection manager with smart fuzzy search, tagging, and AI-powered cover editing using Gemini 2.5 Flash Image.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "name": "au-friends",
+  "description": "A React application for managing friend profiles, featuring AI integration.",
+  "requestFramePermissions": []
 }

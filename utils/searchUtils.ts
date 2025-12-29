@@ -18,9 +18,13 @@ export function calculateSimilarity(query: string, friend: Friend): number {
       else if (tag.toLowerCase().includes(term)) score += 2;
     });
 
-    const regex = new RegExp(term, 'g');
-    const matches = friendText.match(regex);
-    if (matches) score += matches.length;
+    try {
+      const regex = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+      const matches = friendText.match(regex);
+      if (matches) score += matches.length;
+    } catch (e) {
+      // Ignore invalid regex
+    }
   });
 
   return score;
