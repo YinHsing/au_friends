@@ -46,9 +46,6 @@ const FriendDetailModal: React.FC<FriendDetailModalProps> = ({ friend, onClose }
               </h2>
               <div className="flex items-center gap-6">
                 <div className="h-[1px] w-10 bg-[#928BB2]"></div>
-                <p className="text-[12px] text-[#A69B92] tracking-[0.3em] font-bold uppercase leading-none">
-                  Met at {friend.location}
-                </p>
               </div>
             </div>
 
