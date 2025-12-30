@@ -12,8 +12,7 @@ A React application built with Vite.
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   ```
-   
+   ``` 
 2. Install dependencies:
    ```bash
    npm install
