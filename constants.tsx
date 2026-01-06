@@ -14,7 +14,7 @@ export const INITIAL_FRIENDS: Friend[] = [
     id: '2',
     name: 'Jake',
 
-    imageUrl: 'https://images.unsplash.com/photo-1599599810694-b5b37304c041?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/au_friends/images/Jack.jpg',
     tags: ['Whisky Den'],
     description: 'A serene soul met near the Fushimi Inari-taisha. His perspective on time is as layered as the temples he preserves.'
     // connectionLevel: 4
@@ -22,7 +22,7 @@ export const INITIAL_FRIENDS: Friend[] = [
   {
     id: '3',
     name: 'A Ya',
-    imageUrl: 'https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/au_friends/images/A_ya.jpg',
     tags: ['Meet up'],
     description: 'Radiant energy found in the neon heart of Gangnam. She taught me that silence can be the loudest part of a friendship.'
     // connectionLevel: 4.5
@@ -30,40 +30,48 @@ export const INITIAL_FRIENDS: Friend[] = [
   {
     id: '4',
     name: 'Ling Ling',
-    imageUrl: 'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/au_friends/images/Ling.jpg',
     tags: ['Zen 5'],
     description: 'The calm in the center of the storm. Meeting at Zen 5 felt like reconnecting with a part of myself I had forgotten.'
     // connectionLevel: 5
   },
   {
     id: '5',
-    name: 'Jessie',
-    imageUrl: 'https://images.unsplash.com/photo-1459156212016-c81b4dd81f9d?q=80&w=800&auto=format&fit=crop',
-    tags: ['Zen 5'],
+    name: 'Josh',
+    imageUrl: '/au_friends/images/Josh.jpg',
+    tags: ['Whisky Den'],
     description: 'A wanderer between worlds. She belongs everywhere and nowhere, always carrying a piece of the southern sun.'
     // connectionLevel: 4.8
   },
   {
     id: '6',
     name: 'Matt',
-    imageUrl: 'https://images.unsplash.com/photo-1459156212016-c81b4dd81f9d?q=80&w=800&auto=format&fit=crop',
-    tags: ['Zen 5'],
+    imageUrl: '/au_friends/images/Matt.jpg',
+    tags: ['Whisky Den'],
     description: 'A wanderer between worlds. She belongs everywhere and nowhere, always carrying a piece of the southern sun.'
     // connectionLevel: 4.8
   },
   {
     id: '7',
-    name: 'Corian',
-    imageUrl: 'https://images.unsplash.com/photo-1459156212016-c81b4dd81f9d?q=80&w=800&auto=format&fit=crop',
-    tags: ['Zen 5'],
+    name: 'Corann',
+    imageUrl: '/au_friends/images/Corann.jpg',
+    tags: ['Whisky Den'],
     description: 'A wanderer between worlds. She belongs everywhere and nowhere, always carrying a piece of the southern sun.'
     // connectionLevel: 4.8
   }, 
   {
     id: '8',
     name: 'Vincent',
-    imageUrl: 'https://images.unsplash.com/photo-1459156212016-c81b4dd81f9d?q=80&w=800&auto=format&fit=crop',
-    tags: ['Zen 5'],
+    imageUrl: '/au_friends/images/Vincent.jpg',
+    tags: ['Whisky Den'],
+    description: 'A wanderer between worlds. She belongs everywhere and nowhere, always carrying a piece of the southern sun.'
+    // connectionLevel: 4.8
+  },
+  {
+    id: '9',
+    name: 'Jeremy',
+    imageUrl: '/au_friends/images/Jeremy.jpg',
+    tags: ['Whisky Den'],
     description: 'A wanderer between worlds. She belongs everywhere and nowhere, always carrying a piece of the southern sun.'
     // connectionLevel: 4.8
   }
