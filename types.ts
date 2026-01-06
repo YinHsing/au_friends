@@ -5,7 +5,7 @@ export interface Friend {
   imageUrl: string;
   tags: string[];
   description: string;
-  connectionLevel: number;
+  // connectionLevel: number;
 }
 
 export interface SearchState {
